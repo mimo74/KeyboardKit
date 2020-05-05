@@ -9,27 +9,15 @@ let package = Package(
       .library(name: "KeyboardKit", targets: ["KeyboardKit"])
   ],
   targets: [
-      .exclude 
-      .target(name: "KeyboardKit", 
-              dependencies: [], 
-              path: "KeyboardKit", 
+      .target(name: "KeyboardKit", dependencies: [], path: "KeyboardKit", 
               exclude: [
                     "KeyboardKit/Keyboard.h",
                     "KeyboardKit/BarButtonItem.m",
                     "KeyboardKit/BarButtonItem.h",
                     "KeyboardKit/ResponderChainDebugging.m",
                     "KeyboardKit/KeyboardKitClassicDemo",
-
+                    "KeyboardKit/KeyboardKitDemo",
               ]),
-      .testTarget(name: "KeyboardKitTests", dependencies: ["KeyboardKit"], path: "KeyboardKit", 
-              exclude: [
-                    "KeyboardKit/Keyboard.h",
-                    "KeyboardKit/BarButtonItem.m",
-                    "KeyboardKit/BarButtonItem.h",
-                    "KeyboardKit/ResponderChainDebugging.m",
-                    "KeyboardKit/KeyboardKitClassicDemo",
-                    
-              ]),),
   ],
   swiftLanguageVersions: [.v5]
 )
